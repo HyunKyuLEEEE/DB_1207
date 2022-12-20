@@ -43,7 +43,7 @@ BEGIN
 	END IF;
     
     INSERT INTO TICKETING(TI_AMOUNT, TI_TOTAL_PRICE, TI_ME_ID, TI_SS_NUM)
-	VALUES(_COUNT, _ID, _SS_NUM, _TOTAL_PRICE);
+	VALUES(_COUNT, _TOTAL_PRICE, _ID, _SS_NUM);
 	
 -- 예매 좌석을 등록
 	SET _TI_NUM = (SELECT MAX(TI_NUM) FROM TICKETING);
@@ -63,5 +63,3 @@ update screen_schedule set ss_possible_seat = ss_possible_seat - _COUNT
 END //
 DELIMITER ;
 CALL MOVIE_TICKETING2('abc', 27, 58,59,60);
-
-Error Code: 1366. Incorrect integer value: 'abc' for column 'ti_total_price' at row 1
