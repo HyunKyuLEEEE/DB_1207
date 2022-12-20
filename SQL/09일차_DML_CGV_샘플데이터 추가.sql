@@ -42,7 +42,7 @@ insert into ticketing(ti_amount, ti_total_price, ti_me_id, ti_ss_num)
 	values(3, 30000, 'abc',25);
 
 insert ticketing_seat(ts_ti_num, ts_se_num)
-	values(2,11), (2,13),(2,15);
+	values(3,11), (3,13),(3,15);
  /*   
 	select 2, se_num from seat where se_name = 'A1' and se_ci_num = 2;
 insert ticketing_seat(ts_ti_num, ts_se_num)
